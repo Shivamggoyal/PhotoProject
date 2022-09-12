@@ -1,0 +1,524 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #000;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  align-items: center;
+  background: #000;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.logo a {
+  text-decoration: none;
+  color: white;
+}
+
+.logo i {
+  font-size: 28px;
+  color: #4caf50;
+}
+
+.logo span {
+  font-size: 36px;
+}
+
+.navContent ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.navContent ul li a {
+  text-decoration: none;
+  color: grey;
+  font-size: 17px;
+}
+
+.navContent ul li a:focus,
+.navContent ul li a:hover {
+  color: white !important;
+}
+
+.navSocial {
+  font-size: 17px;
+  display: flex;
+  gap: 18px;
+  margin-right: 12px;
+  color: grey;
+}
+
+.navSocial i:hover {
+  color: white;
+  cursor: pointer;
+}
+
+/* Page heading starts here  */
+
+.pageHeading {
+  color: white;
+  margin: 16px auto;
+  width: 50%;
+  text-align: center;
+  display: grid;
+  gap: 10px;
+}
+
+.heading {
+  font-size: 38px;
+  font-weight: 900;
+}
+
+.pageHeading .para {
+  color: grey;
+  font-size: 17px;
+}
+
+.pageHeading a,
+.formButton {
+  text-decoration: none;
+  color: white;
+  background: #27a776;
+  width: 26%;
+  margin: 17px auto;
+  padding: 12px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.pageHeading a:hover,
+.formButton:hover {
+  background: #06613e;
+}
+
+/* Gallery container starts here  */
+
+.galleryContainer {
+  padding: 23px 9px;
+  margin-top: 80px;
+  display: grid;
+  gap: 23px;
+}
+
+.row {
+  display: flex;
+  gap: 21px;
+  margin: 0 19px;
+}
+
+.row img {
+  width: 100%;
+  height: 100%;
+  border-radius: 13px;
+}
+
+.rowImage {
+  position: relative;
+  cursor: pointer;
+  transition: .4s ease;
+}
+
+.rowImage:hover {
+  transform: scale(1.1);
+}
+
+.rowImage::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000006e;
+  opacity: 0;
+  transition: all .4s ease;
+}
+
+.rowImage:hover::after {
+  opacity: 1;
+}
+
+
+
+/* Footer starts here  */
+
+footer {
+  color: white;
+  text-align: center;
+  padding: 46px 0 26px 0px;
+  border-top: 1px solid #8080806e;
+  margin: 27px 0 0 0;
+  font-size: 15px;
+}
+
+
+/* About section  */
+
+.About {
+  color: white;
+  display: flex;
+  width: 80%;
+  gap: 68px;
+  margin: 48px auto;
+  align-items: flex-start;
+}
+
+.aboutImage {
+  width: 154%;
+}
+
+.aboutImage img {
+  width: 100%;
+  height: 100%;
+}
+
+.aboutContent {
+  display: grid;
+  gap: 31px
+}
+
+.aboutContent h1 {
+  color: #27a776;
+  font-size: 32px;
+}
+
+.aboutContent p:first-child {
+  color: grey;
+
+}
+
+.lists {
+  display: flex;
+}
+
+.lists ul {
+  display: grid;
+  gap: 11px;
+  list-style: none;
+}
+
+.lists ul:last-child {
+  margin-left: 75px;
+}
+
+.lists ul li .arrow {
+  color: #27a776;
+  margin: 0 8px 0 0;
+}
+
+.aboutContent p:not(:first-child) {
+  font-size: 18px;
+  width: 87%;
+  text-align: justify;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+/* Reviews section  */
+
+.reviews {
+  color: white;
+  padding-top: 60px;
+}
+
+.cardContainer {
+  display: flex;
+  margin-top: 20px;
+
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 79px 20px;
+  padding: 10px 0;
+  background: #161718;
+  transform: scale(.8) translateX(0);
+  opacity: .3;
+  transition: all.4s ease;
+}
+
+.cardActive {
+  transform: scale(1) translateX(0);
+  opacity: 1;
+}
+
+.stars {
+  color: yellow;
+  margin: 22px 0 2px;
+  font-size: 16px;
+}
+
+.content p {
+  font-size: 20px;
+  width: 60%;
+  text-align: center;
+  margin: 27px auto;
+}
+
+.reviewImage {
+  width: 121px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 8px solid #3b3e41;
+  margin: 20px 0 6px 0;
+}
+
+.reviewImage img {
+  width: 100%;
+  height: 100%;
+}
+
+.reviewName {
+  font-size: 22px;
+}
+
+.radioButton {
+  text-align: center;
+}
+
+.radioButton input {
+  width: 20px;
+  height: 19px;
+  margin: 0 10px;
+  accent-color: grey;
+}
+
+.testinomial {
+  font-size: 25px;
+  margin: 16px 30px 15px;
+  color: grey;
+  font-weight: 900;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+
+
+.reviews p:nth-child(2) {
+  font-size: 40px;
+  margin: 0 30px -54px;
+}
+
+.line {
+  width: 111px;
+  border: 2px solid #27a776;
+  overflow: hidden;
+  height: 0;
+  position: relative;
+  margin: 0 8px;
+}
+
+
+/* Service starts here  */
+
+.serviceCardContainer {
+  color: white;
+  display: flex;
+  padding: 52px 10px;
+}
+
+.serviceCard {
+  display: flex;
+  gap: 23px;
+  flex-direction: column;
+  background: #161718;
+  padding: 61px 18px;
+  margin: 0 31px;
+  position: relative;
+  transition: 1.5s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+
+
+.serviceCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #27a776;
+  transition: all .7s ease;
+  z-index: 0;
+}
+
+.serviceCard h2 {
+  z-index: 2;
+}
+
+.serviceCard p {
+  z-index: 2;
+}
+
+
+
+.icon {
+  font-size: 29px;
+  background: #27a776;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 55px;
+  position: relative;
+  z-index: 1;
+}
+
+.serviceCard:hover:before {
+  height: 500px;
+}
+
+.serviceCard:hover .icon {
+  background-color: #fff;
+  color: #27a776;
+}
+
+
+
+/* Prices starts here  */
+
+.prices {
+  color: white;
+  padding: 20px 50px;
+  display: grid;
+  gap: 14px;
+
+}
+
+.prices p:nth-child(1) {
+  display: flex;
+  font-size: 27px;
+  color: grey;
+  align-items: center;
+}
+
+.prices h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.priceLists {
+  display: flex;
+  justify-content: space-between;
+}
+
+.priceLists ul {
+  list-style: none;
+  display: grid;
+  gap: 29px;
+}
+
+.priceLists ul li {
+  display: flex;
+  justify-content: space-between;
+  width: 44vw;
+  font-size: 20px;
+  padding: 12px 0;
+  border-bottom: 1px dotted grey;
+  align-items: center;
+}
+
+.priceLists ul li p:first-child {
+  color: grey;
+  font-size: 20px;
+}
+
+
+
+
+/* Contact start here  */
+
+.contactContainer {
+  color: white;
+  padding: 70px 0 0;
+}
+
+.infoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.info {
+  display: flex;
+  margin: 0 20px;
+  align-items: flex-start;
+  color: white;
+}
+
+
+.contactLogo {
+  font-size: 30px;
+  color: #27a776;
+  background: #202123;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 57px;
+  margin: 0 13px;
+  height: 53px;
+}
+
+.contactInfo p:first-child {
+  color: grey;
+  font-size: 23px;
+}
+
+.contactInfo p:nth-child(2) {
+  margin: 6px 0;
+}
+
+
+form {
+  text-align: center;
+  width: 72%;
+  margin: 30px auto;
+  display: grid;
+  gap: 20px;
+}
+
+.formRow {
+  display: flex;
+  align-items: center;
+}
+
+.formRow input,
+textarea {
+  width: 100%;
+  font-size: 16px;
+  padding: 14px 10px;
+  background: #202123;
+  outline: none;
+  border: 1px solid #2e3133;
+  margin: 0 11px;
+  border-radius: 8px;
+  color: white;
+}
+
+.formButton {
+  font-size: 19px;
+  width: 18%;
+  border-radius: 10px;
+}
